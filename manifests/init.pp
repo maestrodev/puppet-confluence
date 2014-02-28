@@ -78,6 +78,7 @@ class confluence(
       ensure => directory,
       owner  => $user,
       group  => $group,
+      mode   => 700,
     }
   }
 
@@ -103,6 +104,7 @@ class confluence(
     ensure => directory,
     owner  => $user,
     group  => $group,
+    mode   => 700,
   }
 
   file { "/etc/init.d/confluence":
@@ -110,6 +112,7 @@ class confluence(
     owner   => root,
     group   => root,
     notify  => Service[confluence],
+    mode   => 755,
   }
 
   service { confluence:
