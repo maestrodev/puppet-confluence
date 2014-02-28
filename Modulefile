@@ -1,0 +1,10 @@
+name    'maestrodev-confluence'
+version '0.1.0'
+source 'http://github.com/maestrodev/puppet-confluence.git'
+author 'maestrodev'
+license 'Apache License, Version 2.0'
+summary 'Install Atlassian Confluence standalone'
+description 'Install Atlassian Confluence standalone'
+project_page 'http://github.com/maestrodev/puppet-confluence'
+
+dependency 'mkrakowitzer/deploy'
