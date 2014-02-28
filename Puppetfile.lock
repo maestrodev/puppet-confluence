@@ -1,0 +1,8 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    mkrakowitzer/deploy (0.0.1)
+
+DEPENDENCIES
+  mkrakowitzer/deploy (>= 0)
+
