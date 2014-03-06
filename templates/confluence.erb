@@ -15,12 +15,12 @@ case "$1" in
   # Start command
   start)
     echo "Starting $APP"
-    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/startup.sh &> /dev/null"
+    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/startup.sh"
     ;;
   # Stop command
   stop)
     echo "Stopping $APP"
-    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/shutdown.sh &> /dev/null"
+    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/shutdown.sh"
     echo "$APP stopped successfully"
     ;;
    # Restart command
