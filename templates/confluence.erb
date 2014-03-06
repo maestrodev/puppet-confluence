@@ -7,9 +7,9 @@
 # Name of app ( JIRA, Confluence, etc )
 APP=confluence
 # Name of the user to run as
-USER=<%= user %>
+USER=<%= @user %>
 # Location of application's bin directory
-CATALINA_HOME=<%= installdir %>
+CATALINA_HOME=<%= @installdir %>
  
 case "$1" in
   # Start command
