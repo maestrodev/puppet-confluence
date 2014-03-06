@@ -20,7 +20,7 @@ case "$1" in
   # Stop command
   stop)
     echo "Stopping $APP"
-    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/shutdown.sh"
+    /bin/su -m $USER -s /bin/bash -c "$CATALINA_HOME/bin/shutdown.sh 30 -force"
     echo "$APP stopped successfully"
     ;;
    # Restart command
