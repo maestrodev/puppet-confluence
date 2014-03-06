@@ -55,6 +55,7 @@ class confluence(
   $homedir      = '/var/local/confluence',
   $datadir      = '/var/local/confluence/data',
   $download_url = 'http://www.atlassian.com/software/confluence/downloads/binary',
+  $enable       = true,
 ) {
   Exec { path => "/usr/bin:/usr/sbin/:/bin:/sbin" }
 
@@ -116,8 +117,8 @@ class confluence(
   }
 
   service { confluence:
-    enable => true,
-    ensure => running,
+    enable => $enable,
+    ensure => $enable ? { true => 'running', false => 'stopped' },
   }
 }
 
